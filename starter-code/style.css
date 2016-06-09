@@ -33,7 +33,7 @@ header {
 }
 main {
 	width: 600px;
-	margin: 0 auto;
+	margin: 4px auto;
 	background-color: #808080;
 	padding: 2px 10px;
 }

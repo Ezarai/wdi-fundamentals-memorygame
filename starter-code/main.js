@@ -2,6 +2,10 @@ var cards = ['queen', 'queen', 'king', 'king'];
 var cardsInPlay = [];
 document.getElementsByClassName('board')[0].setAttribute('id', 'game-board');
 var gameBoard = document.getElementById('game-board');
+var kingCard = new Image(); //Preloading card images as they don't display in time otherwise
+kingCard.src = "Card_Images/Spades 13.png"; 
+var queenCard = new Image();
+queenCard.src = "Card_Images/Spades 12.png";
 
 var createBoard = function() {
 	for (var i = 0; i < cards.length; i++) {
@@ -25,15 +29,16 @@ var isMatch = function(inPlay) {
 var isTwoCards = function() {
 	var cardType = this.getAttribute('data-card');
 	var cardId = this.getAttribute('data-cardId');
+	var wait = false;
 	if (cardsInPlay == 0 || cardId != cardsInPlay[0][0]) {
 		cardsInPlay.push([cardId, cardType]);
 		if (cardType == 'king') {
 			// this.innerHTML = '<img src="Card_Images/Spades 13.png" alt="King of spades"/>';
-			this.style.backgroundImage = "url('Card_Images/Spades 13.png')"
+			this.style.backgroundImage = "url('Card_Images/Spades 13.png')";
 		}
 		else {
 			// this.innerHTML = '<img src="Card_Images/Spades 12.png" alt="Queen of spades"/>'
-			this.style.backgroundImage = "url('Card_Images/Spades 12.png')"
+			this.style.backgroundImage = "url('Card_Images/Spades 12.png')";
 		}
 		if (cardsInPlay.length == 2) {
 			isMatch(cardsInPlay);
