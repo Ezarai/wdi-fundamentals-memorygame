@@ -2,6 +2,10 @@ nav {
 	background-color: #808080;
 }
 
+body {
+	background-image: url('Background_image.jpg');
+}
+
 .clearfix:after {
 	visibility: hidden;
 	display: block;
@@ -28,30 +32,36 @@ header {
 	border-bottom: 2px solid #808080;
 }
 main {
-	width: 45%;
-	text-align: center;
+	width: 600px;
+	margin: 0 auto;
+	background-color: #808080;
+	padding: 2px 10px;
 }
 
 h1 {
 	color: rgb(2, 132, 130);
+	margin: 0;
 }
 h2 {
 	color: #ffd700;
 }
 .board {
-	height: 50%;
-	width: 50%;
+	height: 500px;
+	width: 318px;
+	margin: 0 auto;
 }
 
 .card {
 	height: 200px;
 	width: 150px;
-	border: 1px solid black;
+	border: 2px solid black;
 	border-radius: 	10px;
-	background-color: yellow;
+	background-image: url('Card_Images/_Back.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 	display: inline-block;
 	float: left;
-	margin: 8%;
+	margin: 2px;
 }
 
 .name {
