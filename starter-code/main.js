@@ -33,11 +33,9 @@ var isTwoCards = function() {
 	if (cardsInPlay == 0 || cardId != cardsInPlay[0][0]) {
 		cardsInPlay.push([cardId, cardType]);
 		if (cardType == 'king') {
-			// this.innerHTML = '<img src="Card_Images/Spades 13.png" alt="King of spades"/>';
 			this.style.backgroundImage = "url('Card_Images/Spades 13.png')";
 		}
 		else {
-			// this.innerHTML = '<img src="Card_Images/Spades 12.png" alt="Queen of spades"/>'
 			this.style.backgroundImage = "url('Card_Images/Spades 12.png')";
 		}
 		if (cardsInPlay.length == 2) {
@@ -53,22 +51,3 @@ var isTwoCards = function() {
 }
 
 createBoard();
-
-
-// if (cardTwo === cardFour) {
-// 	alert("You found a match!");
-// }
-// else {
-// 	alert("Sorry, try again.");
-// }
-
-// var cardOne = 'queen';
-// var cardTwo = 'queen';
-// var cardThree = 'king';
-// var cardFour = 'king';
-
-// for (var i = 0; i < 4; i++) {
-// 	var card = document.createElement('div');
-// 	card.className = 'card';
-// 	gameBoard.appendChild(card);
-// }
